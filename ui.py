@@ -60,5 +60,8 @@ class QuizzlerUI:
         else:
             self.canvas.config(bg="red")
 
+        self.score_label.config(text=f"score: {self.quiz.score} "
+                                     f"/ {self.quiz.question_number}")
+
         self.window.after(1000, self.get_next_question())
 
